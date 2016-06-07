@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: "home#index"
+  resources :companies
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
