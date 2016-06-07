@@ -1,21 +1,32 @@
 <%= form_for @company do |form| %>
-
-		<%= "Name of company:" %>
-	  <%= form.text_field :name %></br>
-  <%= "Earnings: " %>
-  <%= form.text_field :earnings %></br>
-
-  <%= "Select parent company: " %>
-  <%= form.select :parent_id, options_for_select(Company.all.collect{ |u| [u.name, u.id] }, form.object.parent_id), include_blank: true %></br> 
-  <%= form.submit %>
-<% end -%>
+	<div class="col-sm-12">
+		<div class="form-group col-xs-4">
+			<label><%= "Name of company:" %></label>
+		  <%= form.text_field :name, class: "form-control" %></br>
+	</div>
+	</div>
+	<div class="col-sm-12">	
+		<div class="form-group col-xs-4" >
+			<label><%= "Earnings: " %></label>
+			<%= form.text_field :earnings, class: "form-control "%></br>
+	  </div>
+	</div>
+  <div class="col-sm-12">
+	  <div class="form-group col-xs-4">
+		  <%= "Select parent company: " %>
+		  <%= form.select :parent_id, options_for_select(Company.all.collect{ |u| [u.name, u.id] }, form.object.parent_id), include_blank: true %></br> 
+		  <%= form.submit %>
+			<% end -%>
+		</div>
+	</div>
 
 <!-- 
-<div class="form-group">
-  <label for="usr">Name:</label>
+<
   <input type="text" class="form-control" id="usr">
 </div>
 <div class="form-group">
   <label for="pwd">Password:</label>
   <input type="password" class="form-control" id="pwd">
+style="padding-left: px"
+
 </div> -->
