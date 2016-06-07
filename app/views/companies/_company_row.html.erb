@@ -1,0 +1,10 @@
+<% i||=0 %>
+<tr>
+  <td style="padding-left: <%= i*35 %>px"><%= link_to company.name, company %></td>
+  <td><%= company.earnings %></td>
+  <td><%= company.children_earnings + company.earnings %></td>
+  <td >
+    <%= link_to 'Edit', edit_company_path(company.id),class: "link-to btn btn-info" %>
+    <%= link_to 'Delete', company,class: "link-to btn btn-danger" , :method => 'delete' %>
+  </td>
+</tr>

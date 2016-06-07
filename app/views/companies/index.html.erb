@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>List of companies</h1>
+
+        <table border="1" class="table-hover table">
+          <thead>
+            <tr>
+              <th>Name: </th>
+              <th>Earnings: </th>
+              <th>with children earnings</th>
+              <th>Options: </th>
+            </tr>
+          </thead>
+          <% @companies.each do |company| %>
+            <%= render 'company_row', company: company %>
+            <%= render_childrens(company) %>
+          <% end -%>
+        </table>
+        <%= link_to "New company", new_company_path, class: "link-to btn btn-success" %>
+    </div>
+
+  </div>
+</div>

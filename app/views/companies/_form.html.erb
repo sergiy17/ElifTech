@@ -1,0 +1,20 @@
+<%= form_for @company do |form| %>
+		<%= "Name of company:" %>
+	  <%= form.text_field :name %></br>
+  <%= "Earnings: " %>
+  <%= form.text_field :earnings %></br>
+
+  <%= "Select parent company: " %>
+  <%= form.select :parent_id, options_for_select(Company.all.collect{ |u| [u.name, u.id] }, form.object.parent_id), include_blank: true %></br> 
+  <%= form.submit %>
+<% end -%>
+
+<!-- 
+<div class="form-group">
+  <label for="usr">Name:</label>
+  <input type="text" class="form-control" id="usr">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="pwd">
+</div> -->
