@@ -8,17 +8,13 @@
   <%= csrf_meta_tags %>
 
 </head>
-<body>
+<body ng-app="companiesApp">
 	<div class="container">
 		<div class="jumbotron">
 		    <h1>ElifTech Test Assignment</h1>
-		    <p>Here you can see information about the companies</p> 
+		    <p><%= link_to "Here", root_path %> you can see information about the companies</p> 
 		</div>
-
-	<%= yield %>
+	<div ng-view></div>
 	</div>
 </body>
 </html>
-
-
-</head>

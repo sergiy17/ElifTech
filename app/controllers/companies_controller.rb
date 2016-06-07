@@ -1,6 +1,11 @@
 class CompaniesController < ApplicationController
   def index
     @companies = Company.where(parent_id: nil)
+    puts @companies.inspect
+    respond_to do |format|
+      format.html { }
+      format.json { }
+    end
   end
 
   def show

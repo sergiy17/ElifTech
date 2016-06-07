@@ -1,0 +1,10 @@
+<tr>
+	<td>{{company.name}}</td>
+	<td>{{company.earnings}}</td>
+	<td>{{company.children_earnings}}</td>
+	<td>
+
+	</td>
+</tr>
+<tr ng-repeat="c in company.children" ng-init="company=c" ng-include="'angularjs_app/components/companies/views/company_row.html'" include-replace>
+</tr>
