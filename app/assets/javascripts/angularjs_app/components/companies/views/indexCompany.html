@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>List of companies</h1>
+
+        <table border="1" class="table-hover table">
+          <thead>
+            <tr>
+              <th>sssName: </th>
+              <th>Earnings: </th>
+              <th>With children earnings</th>
+              <th>Options: </th>
+            </tr>
+          </thead>
+          <div ng-repeat="company in companies" class="list-group-item">
+          {{company.name}}
+          {{company.earnings}}
+          <!-- <% @companies.each do |company| %>
+            {{company.name}}
+            {{company.earnings}}
+          <% end -%> -->
+          </div>
+        </table>
+        <a href="/quizzes/new" class="link-to btn btn-success right">New company</a>
+    </div>
+
+  </div>
+</div>
